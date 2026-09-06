@@ -9,14 +9,14 @@ class Solution {
     const hash = {};
     for (let i = 0; i < nums.length; i++) {
 
-      if (hash[nums[i]] !== undefined) {
+      if (hash[nums[i]] === undefined) {
+        const findNum = target - nums[i];
+        hash[findNum] = i
+      } else {
         return [i, hash[nums[i]]]
       }
 
-      const findNum = target - nums[i];
-      hash[findNum] = i
     }
-
   }
 
   // /**
