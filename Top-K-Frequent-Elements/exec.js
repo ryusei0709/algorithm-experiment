@@ -9,9 +9,9 @@ class Solution {
     const arr = [];
     for (let i = 0; i < nums.length; i++) {
       if (hash[nums[i]] === undefined) {
-        hash[nums[i]] = 1
+        hash[nums[i]] = 1;
       } else {
-        hash[nums[i]]++
+        hash[nums[i]]++;
       }
     }
 
@@ -19,10 +19,10 @@ class Solution {
     entries.sort((a, b) => b[1] - a[1]);
 
     for (let i = 0; i < k; i++) {
-      arr.push(Number(entries[i][0]))
+      arr.push(Number(entries[i][0]));
     }
 
-    return arr
+    return arr;
   }
   // topKFrequent(nums, k) {
 
@@ -60,7 +60,6 @@ class Solution {
   //   }
   //   return result
   // }
-
 }
 
 const sol = new Solution();

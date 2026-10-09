@@ -7,16 +7,15 @@ class Solution {
   findPair(nums, k) {
     const hash = {};
     for (let i = 0; i < nums.length; i++) {
-      
-      if(hash[nums[i]] !== undefined) {
-        return [hash[nums[i]], i]
-      } 
-      
+      if (hash[nums[i]] !== undefined) {
+        return [hash[nums[i]], i];
+      }
+
       const addition = nums[i] + k;
-      hash[addition] = i
+      hash[addition] = i;
     }
 
-    return []
+    return [];
   }
 }
 
@@ -56,19 +55,15 @@ function runTests() {
 
     const result = solution.findPair(nums, k);
 
-    const passed =
-      JSON.stringify(result) === JSON.stringify(expected);
+    const passed = JSON.stringify(result) === JSON.stringify(expected);
 
-    console.log(
-      `Test ${i + 1}:`,
-      passed ? "✅ PASS" : "❌ FAIL"
-    );
+    console.log(`Test ${i + 1}:`, passed ? '✅ PASS' : '❌ FAIL');
 
     if (!passed) {
-      console.log("  nums:", nums);
-      console.log("  k:", k);
-      console.log("  expected:", expected);
-      console.log("  result:", result);
+      console.log('  nums:', nums);
+      console.log('  k:', k);
+      console.log('  expected:', expected);
+      console.log('  result:', result);
     }
   }
 }

@@ -8,14 +8,12 @@ class Solution {
   twoSum(nums, target) {
     const hash = {};
     for (let i = 0; i < nums.length; i++) {
-
       if (hash[nums[i]] === undefined) {
         const findNum = target - nums[i];
-        hash[findNum] = i
+        hash[findNum] = i;
       } else {
-        return [i, hash[nums[i]]]
+        return [i, hash[nums[i]]];
       }
-
     }
   }
 
@@ -35,10 +33,9 @@ class Solution {
   //     }
   //   }
   // }
-
 }
 
 const sol = new Solution();
 const res = sol.twoSum([4, 5, 6], 10);
 // const res = sol.twoSum([3, 4, 5, 6], 7);
-console.log(res)
+console.log(res);

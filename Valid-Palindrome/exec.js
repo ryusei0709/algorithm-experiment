@@ -10,10 +10,10 @@ class Solution {
     let i = 0;
     while (replaceStr.length > i) {
       if (replaceStr[strEndIndex] !== replaceStr[i]) {
-        return false
+        return false;
       }
-      i++
-      strEndIndex--
+      i++;
+      strEndIndex--;
     }
 
     return true;
@@ -23,4 +23,4 @@ class Solution {
 const sol = new Solution();
 // const res = sol.isPalindrome('tab a cat');
 const res = sol.isPalindrome('Was it a car or a cat I saw?');
-console.log(res)
+console.log(res);

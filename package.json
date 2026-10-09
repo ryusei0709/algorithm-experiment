@@ -1,0 +1,24 @@
+{
+  "name": "algorithm-experiment",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/ryusei0709/algorithm-experiment#readme",
+  "bugs": {
+    "url": "https://github.com/ryusei0709/algorithm-experiment/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryusei0709/algorithm-experiment.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write \"**/*.{js,json,md}\""
+  },
+  "devDependencies": {
+    "prettier": "^3.9.9"
+  }
+}
