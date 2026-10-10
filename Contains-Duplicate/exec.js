@@ -4,19 +4,17 @@ class Solution {
    * @return {boolean}
    */
   hasDuplicate(nums) {
-
     const hash = {};
     for (let i = 0; i < nums.length; i++) {
       if (hash[nums[i]] !== undefined) {
-        return true
+        return true;
       } else {
-        hash[nums[i]] = 1
+        hash[nums[i]] = 1;
       }
     }
 
-    return false
+    return false;
   }
-
 }
 
 const sol = new Solution();

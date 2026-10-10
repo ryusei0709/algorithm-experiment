@@ -5,24 +5,21 @@ class Solution {
    * @return {boolean}
    */
   containsNearbyDuplicate(nums, k) {
-
-    const hash = {}
+    const hash = {};
     for (let i = 0; i < nums.length; i++) {
-
       if (hash[nums[i]] === undefined) {
-        hash[nums[i]] = i
+        hash[nums[i]] = i;
       } else {
         const prevIndex = hash[nums[i]];
         const abstract = Math.abs(i - prevIndex);
 
         if (abstract <= k) {
-          return true
+          return true;
         }
-        hash[nums[i]] = i
+        hash[nums[i]] = i;
       }
     }
-    return false
-
+    return false;
   }
 }
 
@@ -73,22 +70,17 @@ function runTests() {
   ];
 
   tests.forEach((test, index) => {
-    const result = solution.containsNearbyDuplicate(
-      test.nums,
-      test.k
-    );
+    const result = solution.containsNearbyDuplicate(test.nums, test.k);
 
     const passed = result === test.expected;
 
-    console.log(
-      `Test ${index + 1}: ${passed ? "✅ PASS" : "❌ FAIL"}`
-    );
+    console.log(`Test ${index + 1}: ${passed ? '✅ PASS' : '❌ FAIL'}`);
 
     if (!passed) {
-      console.log(" nums:", test.nums);
-      console.log(" k:", test.k);
-      console.log(" expected:", test.expected);
-      console.log(" result:", result);
+      console.log(' nums:', test.nums);
+      console.log(' k:', test.k);
+      console.log(' expected:', test.expected);
+      console.log(' result:', result);
     }
   });
 }
