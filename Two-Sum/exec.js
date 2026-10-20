@@ -7,10 +7,11 @@ class Solution {
    */
   twoSum(nums, target) {
     const hash = {};
+
     for (let i = 0; i < nums.length; i++) {
+      const want = target - nums[i];
       if (hash[nums[i]] === undefined) {
-        const findNum = target - nums[i];
-        hash[findNum] = i;
+        hash[want] = i;
       } else {
         return [i, hash[nums[i]]];
       }

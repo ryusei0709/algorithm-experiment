@@ -27,7 +27,7 @@ class Solution {
         }
       }
     }
-    return Object.values(hash)
+    return Object.values(hash);
   }
 }
 
