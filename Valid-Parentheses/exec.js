@@ -15,14 +15,13 @@ class Solution {
       if (s[i] === '{' || s[i] === '[' || s[i] === '(') {
         stackArr.push(s[i]);
       } else {
-        const pop = stackArr.pop();
-        if (map[pop] !== s[i]) {
+        const openBracket = stackArr.pop();
+        if (map[openBracket] !== s[i]) {
           return false;
         }
       }
     }
-
-    return stackArr.length !== 0 ? false : true;
+    return stackArr.length === 0;
   }
 }
 
