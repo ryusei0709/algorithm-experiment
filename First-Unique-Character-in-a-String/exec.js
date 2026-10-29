@@ -7,28 +7,27 @@ class Solution {
     const hash = {};
     for (let i = 0; i < s.length; i++) {
       if (hash[s[i]] === undefined) {
-        hash[s[i]] = 0
+        hash[s[i]] = 0;
       } else {
-        hash[s[i]]++
+        hash[s[i]]++;
       }
     }
 
-    for(let i = 0; i < s.length; i++) {
-      if(hash[s[i]] === 0) {
-        return i
+    for (let i = 0; i < s.length; i++) {
+      if (hash[s[i]] === 0) {
+        return i;
       }
     }
 
-    return -1
-
+    return -1;
   }
 }
 
 const tests = [
-  { s: "aaa", expected: -1 },
-  { s: "aaab", expected: 3 },
-  { s: "aaabb", expected: -1 },
-  { s: "abcabcddd", expected: -1 },
+  { s: 'aaa', expected: -1 },
+  { s: 'aaab', expected: 3 },
+  { s: 'aaabb', expected: -1 },
+  { s: 'abcabcddd', expected: -1 },
 
   { s: 'leetcode', expected: 0 },
   { s: 'loveleetcode', expected: 2 },
