@@ -34,7 +34,7 @@ class Solution {
 }
 
 const sol = new Solution();
-const res = sol.evalRPN(["10","6","9","3","+","-11","*","/","*","17","+","5","+"]);
+const res = sol.evalRPN(['10', '6', '9', '3', '+', '-11', '*', '/', '*', '17', '+', '5', '+']);
 // const res = sol.evalRPN(['4', '13', '5', '/', '+']);
 // const res = sol.evalRPN(['1', '2', '+', '3', '*', '4', '-']);
 console.log(res);
