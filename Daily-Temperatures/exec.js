@@ -7,9 +7,7 @@ class Solution {
   dailyTemperatures(temperatures) {
     const result = Array(temperatures.length).fill(0);
     const stack = [];
-
     for (let i = 0; i < temperatures.length; i++) {
-      console.log(temperatures[stack.at(-1)]);
       while (temperatures[i] > temperatures[stack.at(-1)]) {
         const prevIndex = stack.pop();
         result[prevIndex] = i - prevIndex;
@@ -17,17 +15,6 @@ class Solution {
 
       stack.push(i);
     }
-
-    // let i = 0;
-    // while (i < temperatures.length) {
-    //   if (stack.length > 0 && temperatures[i] > temperatures[stack.at(-1)]) {
-    //     const prevIndex = stack.pop();
-    //     result[prevIndex] = i - prevIndex;
-    //   } else {
-    //     stack.push(i);
-    //     i++;
-    //   }
-    // }
 
     return result;
   }
