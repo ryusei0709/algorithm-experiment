@@ -14,20 +14,17 @@ class Solution {
     // sort
     arr.sort((a, b) => b[0] - a[0]);
 
+    const carA = (target - arr[0][0]) / arr[0][1];
+    const carB = (target - arr[1][0]) / arr[1][1];
 
-    const carA = (target - arr[0][0]) / arr[0][1]
-    const carB = (target - arr[1][0]) / arr[1][1]
+    console.log(carA);
+    console.log(carB);
 
-    console.log(carA)
-    console.log(carB)
+    if (carB <= carA) {
+      return true;
+    }
 
-    if(carB <= carA) {
-      return true
-    } 
-
-    return false
-
-
+    return false;
   }
 }
 
