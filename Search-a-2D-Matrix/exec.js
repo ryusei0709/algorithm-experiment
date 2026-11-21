@@ -35,6 +35,6 @@ const res = sol.searchMatrix(
     [10, 11, 12, 13],
     [14, 20, 30, 40],
   ],
-  41,
+  100,
 );
 console.log(res);
